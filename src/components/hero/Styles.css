@@ -1,0 +1,29 @@
+#hero {
+    background: linear-gradient(293.55deg, #363A52 2.01%, #464B65 43.17%, #2F2A28 98.2%);
+    height: 707px;
+}
+
+#hero .background {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 707px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#hero .title {
+    width: 480px;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 90px;
+    letter-spacing: -4%;
+    background: linear-gradient(117.24deg, #FFFFFF 0.48%, #8ADDF0 29.52%, #ADAFD3 82.86%, #9A9CC0 99.52%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 207px;
+    left: 113px;
+}
