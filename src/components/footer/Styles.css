@@ -1,0 +1,35 @@
+#footer {
+    width: 100%;
+    background: #2F2A28;
+    text-align: center;
+    padding: 10px 0;;
+}
+
+#footer h3 {
+    color: #F6F2E9;
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: "Inter Light";
+}
+
+#footer ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 40px;
+}
+
+#footer li a {
+    color: #F6F2E9;
+    opacity: 0.8;
+}
+
+#footer hr {
+    width: 80%;
+    border: none;
+    border-top: 1px solid #4C4644;
+}
+
+#footer hr:last-child {
+    font-size: 11px;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import { FC } from "react";
-import Hero from "../components/hero/Hero";
+import Hero from "../../components/hero/Hero";
 
 const Home: FC = () => {
     return (
-        <div>
+        <div id="home">
             <Hero />;
             <h1>Home</h1>
             <ul>

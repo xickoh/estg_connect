@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'Inter Light';
+  src: url('/public/assets/fonts/Inter_18pt-Light.ttf') format('woff2')
+}
+
+@font-face {
   font-family: 'Inter';
   src: url('/public/assets/fonts/Inter_18pt-Bold.ttf') format('woff2');
   font-weight: bold;
@@ -18,4 +23,10 @@
 body {
   font-family: Inter;
   background: #F6F2E9;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  position: relative;
 }
