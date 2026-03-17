@@ -1,0 +1,78 @@
+.parcerias-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.parcerias-title {
+  font-size: 4.5rem; /* text-7xl */
+  font-weight: 700; /* font-bold */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 7rem; /* py-28 */
+  padding-bottom: 7rem;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  /* Variables and Animation */
+  --duration: 40s;
+  --gap: 4rem;
+  animation: marquee var(--duration) linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--gap);
+}
+
+.brand-logo {
+  height: 5rem; /* h-20 */
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* Gradient Overlays */
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.overlay-left {
+  z-index: 10;
+  background: linear-gradient(
+    to right,
+    var(--background-color, #F6F2E9) 0%,
+    transparent 20%
+  );
+}
+
+.overlay-right {
+  z-index: 20;
+  background: linear-gradient(
+    to right,
+    transparent 80%,
+    var(--background-color, #F6F2E9) 100%
+  );
+}
+
+/* Animation Keyframes */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
