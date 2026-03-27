@@ -1,0 +1,201 @@
+.speaker-detail {
+  min-height: 100vh;
+  background: #f3f0e8;
+  color: #2f2a2a;
+  overflow-x: hidden;
+}
+
+.speaker-detail__hero {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  padding: 20px 0 0;
+}
+
+.speaker-detail__hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 320px;
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 240, 232, 0) 0%,
+    rgba(243, 240, 232, 0.45) 38%,
+    rgba(243, 240, 232, 0.82) 72%,
+    #f3f0e8 100%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.speaker-detail__image-wrap {
+  width: min(48vw, 620px);
+  height: 760px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.speaker-detail__image-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.speaker-detail__company {
+  position: relative;
+  z-index: 1;
+  margin-top: 160px;
+  margin-left: -110px;
+  font-size: clamp(84px, 18vw, 200px);
+  font-weight: 900;
+  line-height: 0.86;
+  color: #000;
+  letter-spacing: -0.06em;
+  word-break: break-word;
+}
+
+.speaker-detail__content-wrap {
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.speaker-detail__content {
+  max-width: 1180px;
+  margin: -20px auto 0;
+  padding: 0 32px 80px;
+}
+
+.speaker-detail__role {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: #5a5555;
+}
+
+.speaker-detail__role span {
+  color: #53c1d8;
+  font-weight: 600;
+}
+
+.speaker-detail__name {
+  margin: 0 0 16px;
+  font-size: clamp(44px, 6vw, 66px);
+  line-height: 1;
+  font-weight: 700;
+  color: #342e2e;
+}
+
+.speaker-detail__bio {
+  margin: 0 0 34px;
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.42;
+  color: #3b3535;
+}
+
+.speaker-detail__about-box {
+  max-width: 360px;
+  margin-bottom: 26px;
+  padding: 14px 18px;
+  border-left: 3px solid #53c1d8;
+  background: #e9e4da;
+}
+
+.speaker-detail__about-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #53c1d8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.speaker-detail__about-box p {
+  margin: 0;
+  font-size: 18px;
+  color: #2f2a2a;
+}
+
+.speaker-detail__linkedin {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #2f2a2a;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #2f2a2a;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.speaker-detail__linkedin:hover {
+  background: #2f2a2a;
+  color: #f3f0e8;
+}
+
+@media (max-width: 1100px) {
+  .speaker-detail__hero {
+    min-height: 640px;
+  }
+
+  .speaker-detail__image-wrap {
+    width: min(52vw, 520px);
+    height: 640px;
+  }
+
+  .speaker-detail__company {
+    margin-top: 150px;
+    margin-left: -90px;
+    font-size: clamp(72px, 16vw, 160px);
+  }
+
+  .speaker-detail__hero::after {
+    height: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .speaker-detail__hero {
+    min-height: auto;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 16px;
+  }
+
+  .speaker-detail__hero::after {
+    height: 180px;
+  }
+
+  .speaker-detail__image-wrap {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 620 / 760;
+  }
+
+  .speaker-detail__company {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0 20px;
+    font-size: clamp(56px, 16vw, 100px);
+  }
+
+  .speaker-detail__content {
+    margin-top: 0;
+    padding: 0 20px 48px;
+  }
+
+  .speaker-detail__bio {
+    font-size: 14px;
+  }
+
+  .speaker-detail__about-box {
+    max-width: 100%;
+  }
+}
