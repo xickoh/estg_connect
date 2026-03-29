@@ -2,12 +2,14 @@ import React from "react";
 import { FC } from "react";
 import Hero from "../components/hero/Hero";
 import Countdown from "../components/countdown/Countdown";
+import Speakers from "../components/speakers/Speakers";
 
 const Home: FC = () => {
     return (
         <div>
             <Hero />;
             <Countdown />
+            <Speakers />
             <h1>Home</h1>
             <ul>
                 <li><a href="/">Home</a></li>
