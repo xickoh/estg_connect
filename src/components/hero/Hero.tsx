@@ -9,7 +9,8 @@ const Hero: FC = () => {
     return (
         <div id="hero">
             <Constellation />
-            {/* <img className="background" src="/assets/hero_bg.png"></img> */}
+            <Globe globeColor="#bbf3ff" />;
+
             <div className="headers">
                 <div className="title">
                     A ESTG CONNECT VOLTOU.
@@ -18,7 +19,6 @@ const Hero: FC = () => {
                     O TEU SEMINÁRIO SOBRE TECH
                 </div>
             </div>
-            <Globe globeColor="#bbf3ff" />;
         </div>
     );
 };

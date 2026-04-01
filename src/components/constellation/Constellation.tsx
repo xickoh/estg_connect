@@ -22,7 +22,7 @@ export default function Constellation() {
         window.addEventListener("resize", resize);
 
         const NUM_POINTS = 120;
-        const MOUSE_DIST = 200;
+        const MOUSE_DIST = 300;
         const points: Array<{ x: number; y: number; vx: number; vy: number }> = [];
 
         const mouse = { x: null, y: null };

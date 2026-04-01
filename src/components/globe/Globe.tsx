@@ -10,7 +10,7 @@ import { Arcs, type ArcDatum } from "./Arcs";
 import React from "react";
 
 const DEFAULT_GLOBE_COLOR = "#555";
-const DEFAULT_ARC_COLOR = "#FFF";
+// const DEFAULT_ARC_COLOR = "#FFF";
 
 interface SphereProps {
     radius?: number;
@@ -125,6 +125,7 @@ export default function Globe({
 
             <OrbitControls
                 autoRotate
+                autoRotateSpeed={1.5}
                 minDistance={5}
                 minPolarAngle={Math.PI * 0.35}
                 maxPolarAngle={Math.PI * 0.55}
