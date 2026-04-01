@@ -1,21 +1,22 @@
 .parcerias-section {
   width: 100%;
   overflow: hidden;
+  margin: 5rem 0;
 }
 
 .parcerias-title {
-  font-size: 4.5rem; /* text-7xl */
-  font-weight: 700; /* font-bold */
+  font-size: 4.5rem;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  color: #31302f;
 }
 
 .marquee-container {
   position: relative;
   overflow: hidden;
-  padding-top: 7rem; /* py-28 */
-  padding-bottom: 7rem;
+  padding-top: 7rem;
 }
 
 .marquee-content {
@@ -36,7 +37,7 @@
 }
 
 .brand-logo {
-  height: 5rem; /* h-20 */
+  height: 5rem;
   width: auto;
   flex-shrink: 0;
 }
