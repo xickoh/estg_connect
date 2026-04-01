@@ -1,3 +1,9 @@
+@media (max-width: 760px) {
+    #navbar ul {
+        display: none !important;
+    }
+}
+
 #navbar {
     display: flex;
     align-items: center;
@@ -7,6 +13,7 @@
     justify-content: space-between;
     height: 53px;
     position: absolute;
+    z-index: 100;
 }
 
 #navbar a:has(#logo) {
