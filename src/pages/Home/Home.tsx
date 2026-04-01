@@ -8,12 +8,6 @@ const Home: FC = () => {
         <div id="home">
             <Hero />;
             <Countdown />
-            <h1>Home</h1>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/speaker">Speaker</a></li>
-            </ul>
         </div>
     );
 };

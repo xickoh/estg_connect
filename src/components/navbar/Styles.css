@@ -29,28 +29,65 @@
 #navbar li,
 #navbar ul {
     list-style: none;
-    display: flex;
-    display: inline;
+    display: inline-flex;
 }
 
 #navbar li {
     margin: 0 20px;
     color: #F6F2E9;
     font-weight: 500;
+    transition: all 0.2s linear;
+    align-items: center;
+    min-width: 92px;
+    justify-content: center;
 }
 
 #navbar li a {
+    position: relative;
     text-decoration: none;
     color: #F6F2E9;
 }
 
 #navbar li a:hover {
-    transition: all 0.2s linear;
-    text-shadow: #F6F2E9 1px 0 15px;
+    color: white;
 }
 
-#navbar li:last-child {
+#navbar li a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    background: #44B9CF;
+    transition: all 0.2s linear;
+}
+
+#navbar li a:hover::after {
+    width: 100%;
+}
+
+#navbar li button {
+    font-size: 16px;
+    border: none;
+    color: #F6F2E9;
     background: #44B9CF;
     padding: 5px 30px;
     border-radius: 20px;
+    font-family: Inter;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#navbar li button:hover {
+    box-shadow: 0px 0px 10px 0px #44B9CF;
+}
+
+
+body:has(.speaker-detail) #navbar li a {
+    color: #2F2A28;
+}
+
+body:has(.speaker-detail) #navbar li a:hover {
+    color: #635c5a;
 }
