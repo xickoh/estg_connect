@@ -9,7 +9,7 @@ const Navbar: FC = () => {
             <ul>
                 <li><a href="#">Oradores</a></li>
                 <li><a href="#">Localização</a></li>
-                <li><a href="#">Bilhetes</a></li>
+                <li><button>Bilhetes</button></li>
             </ul>
         </div>
     );
