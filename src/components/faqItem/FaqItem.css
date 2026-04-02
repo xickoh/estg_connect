@@ -21,11 +21,22 @@
   font-size: 22px;
   line-height: 1;
   margin-right: 16px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item__icon--open {
+  transform: rotate(180deg);
 }
 
 .faq-item__answer {
-  padding: 0 0 18px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
   max-width: 700px;
+}
+
+.faq-item__answer-inner {
+  padding: 0 0 18px;
 }
 
 .faq-item__answer p {

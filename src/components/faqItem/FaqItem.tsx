@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import "./FaqItem.css";
 import { SlArrowDown } from "react-icons/sl";
-import { SlArrowUp } from "react-icons/sl";
 
-type faqItemProps = {
+type FaqItemProps = {
   question: string;
   answer: string;
   isOpen: boolean;
   onClick: () => void;
 };
 
-const faqItem = ({ question, answer, isOpen, onClick }: faqItemProps) => {
+const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    const startHeight = el.getBoundingClientRect().height;
+
+    el.style.height = `${startHeight}px`;
+    el.style.overflow = "hidden";
+
+    requestAnimationFrame(() => {
+      const endHeight = isOpen ? el.scrollHeight : 0;
+      el.style.height = `${endHeight}px`;
+    });
+  }, [isOpen]);
+
   return (
-    <div className="faq-item">
+    <div className={`faq-item ${isOpen ? "faq-item--open" : ""}`}>
       <button
         className="faq-item__question"
         onClick={onClick}
@@ -20,16 +36,22 @@ const faqItem = ({ question, answer, isOpen, onClick }: faqItemProps) => {
         type="button"
       >
         <span>{question}</span>
-        <span className="faq-item__icon">{isOpen ? <SlArrowUp /> : <SlArrowDown />}</span>
+        <span className={`faq-item__icon ${isOpen ? "faq-item__icon--open" : ""}`}>
+          <SlArrowDown />
+        </span>
       </button>
 
-      {isOpen && (
-        <div className="faq-item__answer">
+      <div
+        ref={contentRef}
+        className="faq-item__answer"
+        aria-hidden={!isOpen}
+      >
+        <div className="faq-item__answer-inner">
           <p>{answer}</p>
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
-export default faqItem;
+export default FaqItem;

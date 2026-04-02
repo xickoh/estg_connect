@@ -3,13 +3,13 @@ import { FC } from "react";
 
 import FaqSection from "../components/faqSection/FaqSection";
 
-// adjust these imports to match your project structure
-//import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 //import Footer from "../components/Footer";
 
 const Faq = () => {
   return (
     <>
+      <Navbar />
       <FaqSection />
     </>
   );
