@@ -8,7 +8,8 @@ import "./Styles.css";
 
 const REGISTRATION_CLOSE_DATE = new Date("2026-05-27T00:00:00+01:00");
 
-const REGISTRATION_API_ENDPOINT = "/api" as const;
+const BASE_URL = "https://localhost:7131" as const
+const REGISTRATION_API_ENDPOINT = `${BASE_URL}/api/Inscricao/adicionar` as const;
 
 // ─── Zod schema ─────────────────────────────────────────────────────────────
 z.config(z.locales.pt())
@@ -16,15 +17,15 @@ z.config(z.locales.pt())
 const schema = z.object({
   nome: z.string().min(2, "Nome é obrigatório"),
   email: z.email("Email inválido"),
-  contacto: z
+  telefone: z
     .string()
     .min(9, "Contacto inválido")
     .regex(/^\+?[0-9\s\-()]+$/, "Apenas números, espaços e + são permitidos"),
   profissao: z.string().min(2, "Profissão é obrigatória"),
   instituicao: z.string().min(2, "Instituição é obrigatória"),
   cargo: z.string().optional(),
-  numeroMecanografico: z.string().optional(),
-  restricoesAlimentares: z.string().optional(),
+  numMecanografico: z.string().optional(),
+  restricaoAlimentar: z.string().optional(),
   direitoImagem: z.literal(true, {
     error: () => ({ message: "É necessário aceitar para continuar" }),
   }),
@@ -153,14 +154,14 @@ function RegistrationForm() {
 
           <Field
             label="Contacto telefónico"
-            error={errors.contacto?.message}
+            error={errors.telefone?.message}
             required
           >
             <input
               className="reg-input"
               type="tel"
               placeholder="+351 912 345 678"
-              {...register("contacto")}
+              {...register("telefone")}
             />
           </Field>
 
@@ -197,26 +198,26 @@ function RegistrationForm() {
 
           <Field
             label="Número mecanográfico (se aplicável)"
-            error={errors.numeroMecanografico?.message}
+            error={errors.numMecanografico?.message}
           >
             <input
               className="reg-input"
               type="text"
               placeholder="Nº mecanográfico"
-              {...register("numeroMecanografico")}
+              {...register("numMecanografico")}
             />
           </Field>
         </div>
 
         <Field
           label="Restrições alimentares"
-          error={errors.restricoesAlimentares?.message}
+          error={errors.restricaoAlimentar?.message}
         >
           <textarea
             className="reg-input reg-textarea"
             placeholder="Indica aqui eventuais restrições ou alergias alimentares…"
             rows={4}
-            {...register("restricoesAlimentares")}
+            {...register("restricaoAlimentar")}
           />
         </Field>
 
