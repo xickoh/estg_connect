@@ -6,10 +6,16 @@
         "strict": true,
         "esModuleInterop": true,
         "jsx": "react",
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "paths": {
+            "@public/*": [
+                "./public/*"
+            ]
+        },
     },
     "include": [
         "src/**/*.ts",
-        "src/**/*.tsx"
+        "src/**/*.tsx",
+        "@public/**/*",
     ]
 }
