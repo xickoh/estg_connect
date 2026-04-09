@@ -43,7 +43,7 @@ const Speakers: FC = () => {
       </div>
 
       <p className="oradores__subtitle">
-        Descobre as mentes que estao a moldar o futuro da tecnologia
+        Descobre as mentes que estão a moldar o futuro da tecnologia
       </p>
 
       <div className={`oradores__container ${isCarousel ? "oradores__container--carousel" : ""}`}>

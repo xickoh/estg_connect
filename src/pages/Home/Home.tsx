@@ -3,6 +3,7 @@ import { FC } from "react";
 import Hero from "../../components/hero/Hero";
 import Countdown from "../../components/countdown/Countdown";
 import Speakers from "../../components/speakers/Speakers";
+import Localisation from "../../components/localisation/Localisation";
 
 const Home: FC = () => {
     return (
@@ -10,6 +11,7 @@ const Home: FC = () => {
             <Hero />;
             <Countdown />
             <Speakers />
+            <Localisation />
         </div>
     );
 };
