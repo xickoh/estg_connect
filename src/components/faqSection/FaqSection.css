@@ -60,8 +60,17 @@
     margin-bottom: 32px;
   }
 
+  .faq-section__title {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
   .faq-section__subtitle {
     max-width: 320px;
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .faq-section__list {
+    font-size: 16px;
   }
 
   .faq-section__contact {
@@ -69,10 +78,10 @@
   }
 
   .faq-section__contact p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .faq-section__contact a {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
