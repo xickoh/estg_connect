@@ -1,0 +1,150 @@
+.fale-connosco {
+  background-color: #f0ebe0;
+  padding: 140px 80px;
+}
+
+.fale-connosco__title {
+  font-size: 3rem;
+  color: #2F2A28;
+  margin: 0 0 72px 0;
+  text-align: center;
+}
+
+.fale-connosco__content {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Left column ── */
+.fale-connosco__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fale-connosco__text {
+  font-size: 1.1rem;
+  color: #2c2c4a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.fale-connosco__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.fale-connosco__social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.fale-connosco__social-link:hover {
+  opacity: 0.7;
+}
+
+/* ── Form ── */
+.fale-connosco__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.fale-connosco__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fale-connosco__field label {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  font-family: sans-serif;
+}
+
+.fale-connosco__field input,
+.fale-connosco__field textarea {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  color: #1a1a1a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.fale-connosco__field input:focus,
+.fale-connosco__field textarea:focus {
+  box-shadow: 0 0 0 2px rgba(44, 44, 74, 0.3);
+}
+
+.fale-connosco__btn {
+  background-color: #2F2A28;
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease;
+}
+
+button.fale-connosco__btn:disabled {
+  background-color: #5f5b59;
+  cursor: progress;
+}
+
+.fale-connosco__form textarea#mensagem {
+  resize: vertical !important;
+  min-height: 128px;
+  max-height: 300px;
+}
+
+.fale-connosco__btn:hover {
+  background-color: #333333;
+}
+
+.fale-connosco__field .field_required {
+  color: red;
+}
+
+/* ── Mobile ── */
+@media (max-width: 1024px) {
+  .fale-connosco {
+    padding: 80px 24px;
+  }
+
+  .fale-connosco__title {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .fale-connosco__content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .fale-connosco__socials {
+    margin-top: 16px;
+  }
+}
