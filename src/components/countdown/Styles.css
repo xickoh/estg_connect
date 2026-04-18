@@ -80,3 +80,26 @@
     font-size: 0.95rem;
   }
 }
+
+
+@media (max-width: 540px) {
+  .countdown__row {
+    gap: 0.5rem;
+  }
+
+  .countdown__unit {
+    min-width: 42px;
+  }
+
+  .countdown__value{
+    font-size: 2.5rem;
+  }
+
+  .countdown__label {
+    font-size: 0.55rem;
+  }
+
+  .countdown__separator {
+    font-size: 2.5rem;
+  }
+}

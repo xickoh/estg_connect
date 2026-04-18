@@ -8,7 +8,7 @@ import Localisation from "../../components/localisation/Localisation";
 const Home: FC = () => {
     return (
         <div id="home">
-            <Hero />;
+            <Hero />
             <Countdown />
             <Speakers />
             <Localisation />
