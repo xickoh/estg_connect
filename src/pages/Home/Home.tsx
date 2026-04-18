@@ -14,8 +14,8 @@ const Home: FC = () => {
             <Countdown />
             <Speakers />
             <Localisation />
-            <Parcerias />
             <Registrations />
+            <Parcerias />
         </div>
     );
 };

@@ -24,6 +24,7 @@ body {
   font-family: Inter;
   background: #F6F2E9;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 #root {

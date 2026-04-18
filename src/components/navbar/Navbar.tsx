@@ -7,18 +7,23 @@ const Navbar: FC = () => {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+    const hrefsList = <ul>
+        <li><a href="#oradores">Oradores</a></li>
+        <li><a href="#localisation ">Localização</a></li>
+        <li><a href="#registrations" className="tickets">Bilhetes</a></li>
+    </ul>;
+
     return (
         <>
             <div id="navbar">
                 <a href="/"><img id="logo" src="/assets/logo.svg" /></a>
-                <ul>
-                    <li><a href="#">Oradores</a></li>
-                    <li><a href="#">Localização</a></li>
-                    <li><button className="tickets">Bilhetes</button></li>
-                </ul>
+                {hrefsList}
                 <button className={"burger-icon"} onClick={() => setIsMenuOpen(true)} />
             </div>
-            {(isMenuOpen && <Navmenu closeMenu={() => setIsMenuOpen(false)} />)}
+            {(isMenuOpen &&
+                <Navmenu closeMenu={() => setIsMenuOpen(false)} >
+                    {hrefsList}
+                </Navmenu>)}
         </>
     );
 };

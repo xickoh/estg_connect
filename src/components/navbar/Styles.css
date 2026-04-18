@@ -80,7 +80,7 @@
     width: 100%;
 }
 
-#navbar li button.tickets {
+#navbar li a.tickets {
     font-size: 16px;
     border: none;
     color: #F6F2E9;
@@ -92,8 +92,12 @@
     transition: all 0.2s linear;
 }
 
-#navbar li button.tickets:hover {
+#navbar li a.tickets:hover {
     box-shadow: 0px 0px 10px 0px #44B9CF;
+}
+
+#navbar li a.tickets::after {
+    display: none;
 }
 
 

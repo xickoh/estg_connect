@@ -258,7 +258,7 @@ const Registrations: FC = () => {
   const closed = now >= REGISTRATION_CLOSE_DATE
 
   return (
-    <section className="reg-section">
+    <section id="registrations" className="reg-section">
       <div className="reg-container">
         {closed ? <ClosedContent /> : <RegistrationForm />}
       </div>

@@ -4,20 +4,17 @@ import "./Styles.css";
 
 interface NavmenuProps {
     closeMenu: () => void;
+    children: React.ReactNode;
 }
 
 const Navmenu: FC<NavmenuProps> = (props) => {
 
-    const { closeMenu } = props;
+    const { closeMenu, children } = props;
 
     return (
         <div id="navmenu">
             <button className="close-button" onClick={closeMenu} />
-            <ul>
-                <li><a href="#">Oradores</a></li>
-                <li><a href="#">Localização</a></li>
-                <li><button>Bilhetes</button></li>
-            </ul>
+            {children}
         </div>
     );
 };
