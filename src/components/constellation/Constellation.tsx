@@ -13,6 +13,16 @@ export default function Constellation() {
             return;
         }
 
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            window.navigator.userAgent
+        );
+
+        // Verificar se o navegador suporta eventos de toque
+        if (isMobile) {
+            // Desabilitar a constelação para dispositivos móveis
+            return;
+        }
+
         const resize = () => {
             const rect = canvas!.getBoundingClientRect();
             canvas!.width = rect.width;

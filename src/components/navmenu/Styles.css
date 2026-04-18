@@ -1,0 +1,114 @@
+#navmenu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 325px;
+    background: #2F2A28;
+    z-index: 100;
+}
+
+#navmenu.hidden {
+    display: none;
+}
+
+#navmenu ul {
+    margin-top: 200px;
+    padding: 0px;
+}
+
+#navmenu li,
+#navmenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+
+#navmenu li {
+    margin: 0 20px;
+    color: #F6F2E9;
+    font-weight: 500;
+    transition: all 0.2s linear;
+    align-items: center;
+    min-width: 92px;
+    justify-content: center;
+}
+
+#navmenu li a {
+    position: relative;
+    text-decoration: none;
+    color: #F6F2E9;
+}
+
+#navmenu li a:hover {
+    color: white;
+}
+
+#navmenu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    background: #44B9CF;
+    transition: all 0.2s linear;
+}
+
+#navmenu li a:hover::after {
+    width: 100%;
+}
+
+#navmenu li button {
+    font-size: 16px;
+    border: none;
+    color: #F6F2E9;
+    background: #44B9CF;
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-family: Inter;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#navmenu li button:hover {
+    box-shadow: 0px 0px 10px 0px #44B9CF;
+}
+
+
+body:has(.speaker-detail) #navmenu li a {
+    color: #2F2A28;
+}
+
+body:has(.speaker-detail) #navmenu li a:hover {
+    color: #635c5a;
+}
+
+#navmenu .close-button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    top: 20px;
+    right: 20px;
+}
+
+#navmenu .close-button::before {
+    content: "×";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+#navmenu .close-button:hover::before {
+    text-shadow: 0px 0px 3px white;
+}
