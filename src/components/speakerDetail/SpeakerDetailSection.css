@@ -181,10 +181,7 @@
   }
 
   .speaker-detail__company {
-    margin-top: 0;
-    margin-left: 0;
-    padding: 0 20px;
-    font-size: clamp(56px, 16vw, 100px);
+    display: none;
   }
 
   .speaker-detail__content {
