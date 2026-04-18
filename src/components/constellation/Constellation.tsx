@@ -14,9 +14,11 @@ export default function Constellation() {
         }
 
         const resize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            const rect = canvas!.getBoundingClientRect();
+            canvas!.width = rect.width;
+            canvas!.height = rect.height;
         };
+
 
         resize();
         window.addEventListener("resize", resize);
@@ -28,8 +30,8 @@ export default function Constellation() {
         const mouse = { x: null, y: null };
 
         const onMouseMove = (e: any) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
+            mouse.x = e.pageX;
+            mouse.y = e.pageY;
         };
 
         const onMouseLeave = () => {
