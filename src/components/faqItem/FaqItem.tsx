@@ -37,7 +37,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
       >
         <span>{question}</span>
         <span className={`faq-item__icon ${isOpen ? "faq-item__icon--open" : ""}`}>
-          <SlArrowDown />
+          {/* <SlArrowDown /> */}
         </span>
       </button>
 

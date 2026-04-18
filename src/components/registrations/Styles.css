@@ -1,0 +1,371 @@
+/* ─── Section wrapper ───────────────────────────────────────────── */
+.reg-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  color: var(--text);
+  box-sizing: border-box;
+
+
+  --blue: #44b9cf;
+  --blue-10: rgba(68, 185, 207, 0.1);
+  --error: #FF2C2C;
+  --title: #31302f;
+  --text: #202020;
+  --surface: #ffffff;
+  --border: rgba(32, 32, 32, 0.12);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  /* --shadow-input: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.07); */
+  --shadow-input: none;
+  --shadow-card: none;
+}
+
+.reg-container {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* ─── Badge ─────────────────────────────────────────────────────── */
+.reg-badge {
+  display: inline-block;
+  background: var(--blue-10);
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+}
+
+/* ─── Title / subtitle ──────────────────────────────────────────── */
+.reg-title {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 800;
+  color: var(--title);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.reg-subtitle {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0 0 48px;
+}
+
+/* ─── Closed ────────────────────────────────────────────────────── */
+.reg-closed {
+  text-align: center;
+  animation: fadeUp 0.55s ease both;
+}
+
+.reg-closed-msg {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.7;
+  max-width: 480px;
+  margin: 0 auto 56px;
+}
+
+/* ─── Stats row ─────────────────────────────────────────────────── */
+.reg-stats {
+  display: flex;
+  justify-content: center;
+  gap: clamp(24px, 6vw, 56px);
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.reg-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.reg-stat-value {
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.reg-stat-label {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ─── Form wrapper ──────────────────────────────────────────────── */
+.reg-form-wrapper {
+  animation: fadeUp 0.55s ease both;
+}
+
+.reg-form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reg-form {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 48px);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─── Two-column grid for most fields ──────────────────────────── */
+.reg-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .reg-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Field ─────────────────────────────────────────────────────── */
+.reg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.reg-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--title);
+  letter-spacing: 0.01em;
+}
+
+.reg-required {
+  color: var(--error);
+  margin-left: 2px;
+}
+
+/* ─── Input / Textarea ──────────────────────────────────────────── */
+.reg-input {
+  background: #f7f5f2;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  box-shadow: var(--shadow-input);
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reg-input::placeholder {
+  color: rgba(32, 32, 32, 0.35);
+}
+
+.reg-input:focus {
+  background: #fff;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(68, 185, 207, 0.15);
+}
+
+.reg-field--error .reg-input {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(255, 141, 141, 0.15);
+}
+
+.reg-textarea {
+  resize: vertical;
+  min-height: 110px;
+  font-family: sans-serif;
+}
+
+/* ─── Error message ─────────────────────────────────────────────── */
+.reg-error-msg {
+  font-size: 0.78rem;
+  color: var(--error);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* ─── Checkbox ──────────────────────────────────────────────────── */
+.reg-checkbox-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.reg-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Hide native checkbox */
+.reg-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.reg-checkbox-custom {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border);
+  background: #f7f5f2;
+  box-shadow: var(--shadow-input);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+  margin-top: 1px;
+  position: relative;
+}
+
+.reg-checkbox:checked + .reg-checkbox-custom {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.reg-checkbox:checked + .reg-checkbox-custom::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.reg-checkbox:focus-visible + .reg-checkbox-custom {
+  box-shadow: 0 0 0 3px rgba(68, 185, 207, 0.2);
+}
+
+.reg-field--error .reg-checkbox-custom,
+.reg-checkbox-field.reg-field--error .reg-checkbox-custom {
+  border-color: var(--error);
+}
+
+.reg-checkbox-text {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ─── Submit button ─────────────────────────────────────────────── */
+.reg-submit {
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--title);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+  box-shadow: 0 4px 16px rgba(49, 48, 47, 0.18);
+  margin-top: 4px;
+}
+
+.reg-submit:hover:not(:disabled) {
+  background: #1a1918;
+  box-shadow: 0 6px 20px rgba(49, 48, 47, 0.26);
+}
+
+.reg-submit:active:not(:disabled) {
+  box-shadow: 0 2px 8px rgba(49, 48, 47, 0.14);
+}
+
+.reg-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ─── Success state ─────────────────────────────────────────────── */
+.reg-success {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: clamp(40px, 8vw, 64px);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  margin-bottom: 48px;
+  animation: fadeUp 0.4s ease both;
+}
+
+.reg-success-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(68, 185, 207, 0.35);
+}
+
+.reg-success-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--title);
+  margin: 0 0 10px;
+}
+
+.reg-success-text {
+  font-size: 1rem;
+  opacity: 0.65;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ─── Animations ────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Responsive tweaks ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .reg-form {
+    padding: 24px 20px;
+    border-radius: var(--radius-md);
+  }
+
+  .reg-stats {
+    gap: 20px;
+  }
+}

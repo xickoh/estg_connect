@@ -5,6 +5,7 @@ import Countdown from "../../components/countdown/Countdown";
 import Parcerias from "../../components/parcerias/Parcerias";
 import Speakers from "../../components/speakers/Speakers";
 import Localisation from "../../components/localisation/Localisation";
+import Registrations from "../../components/registrations/Registrations";
 
 const Home: FC = () => {
     return (
@@ -14,6 +15,7 @@ const Home: FC = () => {
             <Speakers />
             <Localisation />
             <Parcerias />
+            <Registrations />
         </div>
     );
 };
