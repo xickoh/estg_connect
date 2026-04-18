@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Speaker from './pages/Speaker';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         </Routes>
       </Router>
       <Footer />
+      <ToastContainer position="bottom-right" />
     </>
   );
 };

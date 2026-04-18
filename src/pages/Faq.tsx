@@ -1,12 +1,13 @@
 import React from "react";
-import { FC } from "react";
 
-const Faq: FC = () => {
-    return (
-        <div>
-            <h1>Faq</h1>
-        </div>
-    );
+import FaqSection from "../components/faqSection/FaqSection";
+
+const Faq = () => {
+  return (
+    <>
+      <FaqSection />
+    </>
+  );
 };
 
 export default Faq;
